@@ -12,3 +12,17 @@ What does it make different compared to other Web Visual Sortings?
 - You can choose your own array, or even do it random by giving it the minimum and maximum length of the array
 - Really simple to use compared to other websites with not labeled buttons and overwhelmingly many options to do one simple task
 - It's colored :) so you can remember it easier the next time you think of it
+
+### Available sorting algorithms:
+- Merge Sort
+- Quick Sort
+- Heap Sort
+- Bubble Sort
+- Selection Sort
+- Insertion Sort
+- Radix Sort
+- Mutant Bubble Sort
+- Cocktail Sort
+- Stalin Sort
+- Bogo Sort
+Wondering how these algorithms work and which one is the best? Try them out!
