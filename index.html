@@ -1,13 +1,3 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-  <title>Web Visual Sorting Algorithms</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script src="/js/script.js"></script>
-</head>
 <body onload=timer()>	
   <div class="navbar-fixed">
     <ul id="dropdown1" class="dropdown-content">
@@ -15,13 +5,20 @@
       <li><a onclick="sorting('Quick Sort')"><b>Quick Sort</b></a></li>
       <li><a onclick="sorting('Heap Sort')"><b>Heap Sort</b></a></li>
       <li><a onclick="sorting('Bubble Sort')"><b>Bubble Sort</b></a></li>
+      <li><a onclick="sorting('Selection Sort')"><b>Selection Sort</b></a></li>
+      <li><a onclick="sorting('Insertion Sort')"><b>Insertion Sort</b></a></li>
       <li><a onclick="sorting('Radix Sort')"><b>Radix Sort</b></a></li>
       <li><a onclick="sorting('Mutant Bubble Sort')"><b>Mutant Bubble Sort</b></a></li>
+      <li><a onclick="sorting('Cocktail Sort')"><b>Cocktail Sort</b></a></li>
+      <li><a onclick="sorting('Stalin Sort')"><b>Stalin Sort</b></a></li>
+      <li><a onclick="sorting('Bogo Sort')"><b>Bogo Sort</b></a></li>
     </ul>
     <ul id="dropdown2" class="dropdown-content">
+      <li><a onclick="setSpeed('Very Slow')">Very Slow</a></li>
       <li><a onclick="setSpeed('Slow')">Slow</a></li>
       <li><a onclick="setSpeed('Normal')">Normal</a></li>
       <li><a onclick="setSpeed('Fast')">Fast</a></li>
+      <li><a onclick="setSpeed('Very Fast')">Very Fast</a></li>
     </ul>
     <nav>
       <div class="nav-wrapper">
@@ -37,6 +34,10 @@
     </nav>
   </div>
 
+  <div class="row center">
+    <h5 id="timer" style="font-weight: bold; color: black;"><b>00:00:00</b></h5>
+  </div>
+
   <div class="container center">
     <h4 class="center" id="algorithm">Algorithm: <a id="sortTitle" style="color: blue">Merge Sort</a></h4>
     <h5 class="center" id="algorithm">Speed: <a id="speedTitle" style="color: blue">Slow</a></h5>
@@ -46,6 +47,16 @@
     <div class="numbers input-field col s6">
       <input placeholder="1 5 9 13 4 8 22 46 148 245 3 7" id="numbers" type="text" class="validate">
       <label for="numbers">Numbers To Sort Field</label>
+    </div>
+    <div class="row center">
+      <div class="input-field col s6">
+        <input id="minLength" type="number" class="validate" value=500 min=1>
+        <label for="minLength">Minimum length of random generated array</label>
+      </div>
+      <div class="input-field col s6">
+        <input id="maxLength" type="number" class="validate" value=500 min=1>
+        <label for="maxLength">Maximum length of random generated array</label>
+      </div>
     </div>
   </div>
 </body>
