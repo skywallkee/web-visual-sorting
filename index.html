@@ -8,40 +8,40 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="/js/script.js"></script>
 </head>
-<body>	
+<body onload=timer()>	
   <div class="navbar-fixed">
     <ul id="dropdown1" class="dropdown-content">
-        <li><a href="">Merge Sort</a></li>
-        <li><a href="">Quick Sort</a></li>
-        <li><a href="">Heap Sort</a></li>
-        <li><a href="">Bubble Sort</a></li>
-        <li><a href="">Mutant Bubble Sort</a></li>
-        <li><a href="">Radix Sort</a></li>
-        <li><a href="">Cocktail Sort</a></li>
-      </ul>
+      <li><a onclick="sorting('Merge Sort')"><b>Merge Sort</b></a></li>
+      <li><a onclick="sorting('Quick Sort')"><b>Quick Sort</b></a></li>
+      <li><a onclick="sorting('Heap Sort')"><b>Heap Sort</b></a></li>
+      <li><a onclick="sorting('Bubble Sort')"><b>Bubble Sort</b></a></li>
+      <li><a onclick="sorting('Radix Sort')"><b>Radix Sort</b></a></li>
+      <li><a onclick="sorting('Mutant Bubble Sort')"><b>Mutant Bubble Sort</b></a></li>
+    </ul>
+    <ul id="dropdown2" class="dropdown-content">
+      <li><a onclick="setSpeed('Slow')">Slow</a></li>
+      <li><a onclick="setSpeed('Normal')">Normal</a></li>
+      <li><a onclick="setSpeed('Fast')">Fast</a></li>
+    </ul>
     <nav>
       <div class="nav-wrapper">
         <a href="" class="brand-logo">Visual Sort</a>
         <ul class="right hide-on-med-and-down">
-          <li><a href="">Generate New Random Array</a></li>
-          <li><a href="">Read Array From Field</a></li>
-          <li><a href="">Change Array Size</a></li>
-          <li><a href="">Change Sorting Speed</a></li>
-          <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Select Sorting Algorithm<i class="material-icons right">arrow_drop_down</i></a></li>
+          <li><a onclick="createRandomArray()">Generate New Random Array</a></li>
+          <li><a onclick="setArrayField()">Read Array From Field</a></li>
+          <li><a class="dropdown-trigger" data-target="dropdown2">Change Sorting Speed<i class="material-icons right">arrow_drop_down</i></a></li>
+          <li><a class="dropdown-trigger" data-target="dropdown1">Select Sorting Algorithm<i class="material-icons right">arrow_drop_down</i></a></li>
+          <li style="background-color: green;" id="startButton"><a onclick="sort()">Start Sorting</a></li>
         </ul>
       </div>
     </nav>
   </div>
 
   <div class="container center">
-    <h3 class="center" id="algorithm">Current algorithm: <span style="color: blue">Merge Sort</span></h3>
-    <div class="vertical-lines s6">
-      <div class="line" style="display: inline-block; border-left: 50px solid grey; height: 400px;"></div>
-      <div class="line" style="display: inline-block; border-left: 50px solid grey; height: 70px;"></div>
-      <div class="line" style="display: inline-block; border-left: 50px solid grey; height: 700px;"></div>
-      <div class="line" style="display: inline-block; border-left: 50px solid grey; height: 200px;"></div>
-      <div class="line" style="display: inline-block; border-left: 50px solid grey; height: 100px;"></div>
-      <div class="line" style="display: inline-block; border-left: 50px solid grey; height: 150px;"></div>
+    <h4 class="center" id="algorithm">Algorithm: <a id="sortTitle" style="color: blue">Merge Sort</a></h4>
+    <h5 class="center" id="algorithm">Speed: <a id="speedTitle" style="color: blue">Slow</a></h5>
+    <div class="col s6" id="vertical-lines">
+      
     </div>
     <div class="numbers input-field col s6">
       <input placeholder="1 5 9 13 4 8 22 46 148 245 3 7" id="numbers" type="text" class="validate">
