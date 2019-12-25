@@ -25,4 +25,5 @@ What does it make different compared to other Web Visual Sortings?
 - Cocktail Sort
 - Stalin Sort
 - Bogo Sort
+
 Wondering how these algorithms work and which one is the best? Try them out!
