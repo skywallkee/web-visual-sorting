@@ -1,3 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Web Visual Sorting Algorithms</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="/js/script.js"></script>
+  <script src="/js/sort/mergeSort.js"></script>
+  <script src="/js/sort/bubbleSort.js"></script>
+  <script src="/js/sort/mBubbleSort.js"></script>
+  <script src="/js/sort/bogoSort.js"></script>
+  <script src="/js/sort/stalinSort.js"></script>
+  <script src="/js/sort/cocktailSort.js"></script>
+  <script src="/js/sort/radixSort.js"></script>
+  <script src="/js/sort/insertionSort.js"></script>
+  <script src="/js/sort/selectionSort.js"></script>
+  <script src="/js/sort/quickSort.js"></script>
+  <script src="/js/sort/heapSort.js"></script>
+  <script src="/js/timer.js"></script>
+</head>
 <body onload=timer()>	
   <div class="navbar-fixed">
     <ul id="dropdown1" class="dropdown-content">
@@ -37,10 +59,9 @@
   <div class="row center">
     <h5 id="timer" style="font-weight: bold; color: black;"><b>00:00:00</b></h5>
   </div>
-
   <div class="container center">
-    <h4 class="center" id="algorithm">Algorithm: <a id="sortTitle" style="color: blue">Merge Sort</a></h4>
-    <h5 class="center" id="algorithm">Speed: <a id="speedTitle" style="color: blue">Slow</a></h5>
+    <h4 class="center" id="algorithm">Current algorithm: <a id="sortTitle" style="color: blue">Merge Sort</a></h4>
+    <h5 class="center" id="algorithm">Animation Speed: <a id="speedTitle" style="color: blue">Slow</a></h5>
     <div class="col s6" id="vertical-lines">
       
     </div>
