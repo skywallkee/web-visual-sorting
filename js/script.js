@@ -107,6 +107,95 @@ function createRandomArray() {
     started = false;
 }
 
+async function sort() {
+    if(started == false){
+        clearTimer();
+        startTimer();
+        document.getElementById("startButton").style["background-color"] = "blue";
+        if(document.getElementById('sortTitle').textContent == "Merge Sort") {
+            started = true;
+            var array = Array.from(document.getElementsByClassName('line'));
+            array = await mergeSort(array);
+            document.getElementById("startButton").style["background-color"] = "green";
+            started = false;
+        }
+        else if(document.getElementById('sortTitle').textContent == "Quick Sort") {
+            started = true;
+            var array = Array.from(document.getElementsByClassName('line'));
+            var result = [];
+            for(index in array) {
+                result.push(parseInt(array[index].style["height"]));
+            }
+            await quickSort(result);
+            document.getElementById("startButton").style["background-color"] = "green";
+            started = false;
+        }
+        else if(document.getElementById('sortTitle').textContent == "Heap Sort") {
+            started = true;
+            await heapSort();
+            document.getElementById("startButton").style["background-color"] = "green";
+            started = false;
+        }
+        else if(document.getElementById('sortTitle').textContent == "Bubble Sort") {
+            started = true;
+            await bubbleSort();
+            document.getElementById("startButton").style["background-color"] = "green";
+            started = false;
+        }
+        else if(document.getElementById('sortTitle').textContent == "Selection Sort") {
+            started = true;
+            await selectionSort();
+            document.getElementById("startButton").style["background-color"] = "green";
+            started = false;
+        }
+        else if(document.getElementById('sortTitle').textContent == "Insertion Sort") {
+            started = true;
+            await insertionSort();
+            document.getElementById("startButton").style["background-color"] = "green";
+            started = false;
+        }
+        else if(document.getElementById('sortTitle').textContent == "Radix Sort") {
+            started = true;
+            var array = Array.from(document.getElementsByClassName('line'));
+            var result = [];
+            for(index in array) {
+                result.push(parseInt(array[index].style["height"]));
+            }
+            await radixSort(result);
+            document.getElementById("startButton").style["background-color"] = "green";
+            started = false;
+        }
+        else if(document.getElementById('sortTitle').textContent == "Mutant Bubble Sort") {
+            started = true;
+            await mBubbleSort();
+            document.getElementById("startButton").style["background-color"] = "green";
+            started = false;
+        }
+        else if(document.getElementById('sortTitle').textContent == "Cocktail Sort") {
+            started = true;
+            await cocktailSort();
+            document.getElementById("startButton").style["background-color"] = "green";
+            started = false;
+        }
+        else if(document.getElementById('sortTitle').textContent == "Stalin Sort") {
+            started = true;
+            await stalinSort();
+            document.getElementById("startButton").style["background-color"] = "green";
+            started = false;
+        }
+        else if(document.getElementById('sortTitle').textContent == "Bogo Sort") {
+            started = true;
+            await bogoSort();
+            document.getElementById("startButton").style["background-color"] = "green";
+            started = false;
+        }
+        else {
+            console.log("Nope");
+        }
+        stopTimer();
+    }
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     createRandomArray();
 }, false);
